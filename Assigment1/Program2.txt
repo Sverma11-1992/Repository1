@@ -1,0 +1,39 @@
+using System;
+
+
+namespace Rextester
+{
+    public class Program 
+    {
+       
+        public static bool isPalindrome(string str) 
+    { 
+	
+        int l = 0; 
+        int h = str.Length - 1; 
+
+	 
+        while (h > l) 
+        { 
+            if (str[l++] != str[h--]) 
+            { 
+                
+                Console.Write(str+" is not a palindrome\t");
+                return false; 
+                
+            } 
+        } 
+
+	Console.Write(str+" is a palindrome\t");
+	return true; 
+    } 
+
+         public static void Main(string[] args) 
+            { 
+                Console.WriteLine((isPalindrome("madam")) ? true : false);  
+                Console.WriteLine((isPalindrome("malayalam")) ? true : false); 
+                Console.WriteLine((isPalindrome("aaaad")) ? true : false ); 
+            } 
+   
+    }
+}
